@@ -1,0 +1,30 @@
+{
+  "name": "angular-setup",
+  "version": "1.0.0",
+  "description": "Set up AngularJS application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marktristan/angular-setup.git"
+  },
+  "keywords": [
+    "angular",
+    "setup",
+    "angular-setup"
+  ],
+  "author": "Mark Tristan Victorio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marktristan/angular-setup/issues"
+  },
+  "homepage": "https://github.com/marktristan/angular-setup",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-bower": "0.0.10",
+    "gulp-run": "^1.6.10",
+    "gulp-util": "^3.0.6"
+  }
+}
