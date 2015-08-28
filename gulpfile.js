@@ -4,6 +4,7 @@ var fs = require('fs');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var run = require('gulp-run');
+var del = require('del');
 
 gulp.task('setup', function () {
     fs.mkdir('./public', function (err) {
@@ -65,4 +66,23 @@ gulp.task('bower', function () {
     });
 });
 
-gulp.task('init', ['setup', 'bower']);
+gulp.task('clean-index', function () {
+    fs.stat('index.html', function (err, stat) {
+        if (!err) {
+            del('index.html');
+        }
+    });
+});
+
+gulp.task('move-index', ['clean-index'], function () {
+    fs.stat('index.html', function (err, stat) {
+        if (!err) {
+            gutil.log('Moving', '\'' + gutil.colors.magenta('index.html') + '\'', 'to public directory...');
+
+            gulp.src('index.html')
+                .pipe(gulp.dest('public'));
+        }
+    });
+});
+
+gulp.task('init', ['setup', 'bower', 'move-index']);
