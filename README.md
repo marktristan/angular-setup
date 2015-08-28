@@ -5,6 +5,9 @@ Set up your AngularJS app in a breeze!
 Make sure you have the following installed:
 * [NodeJS](https://nodejs.org)
 * [Bower](http://bower.io) (Install as global)
+```sh
+$ npm install -g bower
+```
 
 ### Instructions
 After installing the requirements, follow these steps:
@@ -20,7 +23,11 @@ $ gulp init
 ```
 This will create application directories and download dependencies.
 
-[AngularJS](https://angularjs.org) and [Bootstrap](http://getbootstrap.com) were pre-installed.
+### Pre-installed bower packages
+* [AngularJS](https://angularjs.org)
+* [Modernizr](http://modernizr.com)
+* [Bootstrap](http://getbootstrap.com)
+* [Normalize.css](https://necolas.github.io/normalize.css)
 
 You're free to install any additional node or bower modules for your project needs.
 
