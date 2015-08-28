@@ -44,23 +44,23 @@ gulp.task('bower', function () {
                 gutil.log('Created', '\'' + gutil.colors.magenta('.bowerrc') + '\'');
             });
         }
-    });
 
-    fs.stat('bower.json', function (err, stat) {
-        if(err == null) {
-            gutil.log('Installing dependencies...');
-        } else {
-            var bowerJsonText = "{\n\t\"name\": \"angular-setup\"\n}";
-
-            fs.writeFile('bower.json', bowerJsonText, function (err) {
-                if (err) throw err;
-                gutil.log('Created', '\'' + gutil.colors.magenta('bower.json') + '\'');
+        fs.stat('bower.json', function (err, stat) {
+            if(err == null) {
                 gutil.log('Installing dependencies...');
-            });
-        }
-        
-        run('bower install angular').exec()
-            .pipe(run('bower install bootstrap'));
+            } else {
+                var bowerJsonText = "{\n\t\"name\": \"angular-setup\"\n}";
+
+                fs.writeFile('bower.json', bowerJsonText, function (err) {
+                    if (err) throw err;
+                    gutil.log('Created', '\'' + gutil.colors.magenta('bower.json') + '\'');
+                    gutil.log('Installing dependencies...');
+                });
+            }
+            
+            run('bower install angular').exec()
+                .pipe(run('bower install bootstrap'));
+        });
     });
 
     // return bower();
