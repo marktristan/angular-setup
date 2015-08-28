@@ -20,7 +20,11 @@ $ gulp init
 ```
 This will create application directories and download dependencies.
 
-[AngularJS](https://angularjs.org) and [Bootstrap](http://getbootstrap.com) were pre-installed.
+### Pre-installed bower packages
+* [AngularJS](https://angularjs.org)
+* [Modernizr](http://modernizr.com)
+* [Bootstrap](http://getbootstrap.com)
+* [Normalize.css](https://necolas.github.io/normalize.css)
 
 You're free to install any additional node or bower modules for your project needs.
 
