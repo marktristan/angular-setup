@@ -29,6 +29,6 @@ This will create application directories and download dependencies.
 * [Bootstrap](http://getbootstrap.com)
 * [Normalize.css](https://necolas.github.io/normalize.css)
 
-You're free to install any additional node or bower modules for your project needs.
+Recommended: Use npm or bower to install packages.
 
 That's it! You're good to go.
