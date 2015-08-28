@@ -30,8 +30,6 @@ gulp.task('setup', function () {
                 fs.mkdir('public/assets/img');
                 fs.mkdir('public/assets/js');
             });
-
-            fs.writeFile('public/index.html', '<!-- index.html -->');
         }
     });
 });
