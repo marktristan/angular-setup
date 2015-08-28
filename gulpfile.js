@@ -31,9 +31,7 @@ gulp.task('setup', function () {
                 fs.mkdir('public/assets/js');
             });
 
-            fs.mkdir('public/views', function (err) {
-                fs.writeFile('public/views/index.html', '<!-- index.html -->');
-            });
+            fs.writeFile('public/index.html', '<!-- index.html -->');
         }
     });
 });
