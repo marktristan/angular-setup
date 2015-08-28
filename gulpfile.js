@@ -37,6 +37,15 @@ gulp.task('setup', function () {
 });
  
 gulp.task('bower', function () {
+    fs.stat('.bowerrc', function (err, stat) {
+        if(err) {
+            fs.writeFile('.bowerrc', "{\n\t\"directory\": \"./public/vendor/\"\n}", function (err) {
+                if (err) throw err;
+                gutil.log('Created', '\'' + gutil.colors.magenta('.bowerrc') + '\'');
+            });
+        }
+    });
+
     fs.stat('bower.json', function (err, stat) {
         if(err == null) {
             gutil.log('Installing dependencies...');
