@@ -5,6 +5,9 @@ Set up your AngularJS app in a breeze!
 Make sure you have the following installed:
 * [NodeJS](https://nodejs.org)
 * [Bower](http://bower.io) (Install as global)
+```sh
+$ npm install -g bower
+```
 
 ### Instructions
 After installing the requirements, follow these steps:
