@@ -23,7 +23,6 @@
   "homepage": "https://github.com/marktristan/angular-setup",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-bower": "0.0.10",
     "gulp-run": "^1.6.10",
     "gulp-util": "^3.0.6"
   }

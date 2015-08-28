@@ -3,7 +3,6 @@
 var fs = require('fs');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-// var bower = require('gulp-bower');
 var run = require('gulp-run');
 
 gulp.task('setup', function () {
@@ -59,11 +58,11 @@ gulp.task('bower', function () {
             }
             
             run('bower install angular').exec()
-                .pipe(run('bower install bootstrap'));
+                .pipe(run('bower install modernizr'))
+                .pipe(run('bower install bootstrap'))
+                .pipe(run('bower install normalize.css'));
         });
     });
-
-    // return bower();
 });
 
 gulp.task('init', ['setup', 'bower']);
