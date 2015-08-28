@@ -17,7 +17,7 @@ Install node modules
 $ npm install
 ```
 
-Initialize gulp
+Initialize gulp tasks
 ```sh
 $ gulp init
 ```
